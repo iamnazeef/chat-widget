@@ -4,7 +4,7 @@ import chatHistoryIcon from "../../../icons/ic-chat-history.svg";
 
 const Toolbar = () => {
     return (
-        <div className={styles.toolbar}>
+        <div id="chat-interface-toolbar" className={styles.toolbar}>
             <div className={styles.logo}>
                 <img 
                     height="22px" 

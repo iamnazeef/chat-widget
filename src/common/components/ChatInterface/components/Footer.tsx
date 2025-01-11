@@ -3,7 +3,7 @@ import styles from "./styles/Footer.module.css";
 
 const Footer = () => {
     return (
-        <div className={styles.footer}>
+        <div id="chat-interface-footer" className={styles.footer}>
             <a className={styles.hyperLink} href="https://getorca.ai" target="_blank" rel="noopener">
                 <img src={orcaLogo} width={20} height={18} />
                 <p>Powered by ORCA AI</p>
