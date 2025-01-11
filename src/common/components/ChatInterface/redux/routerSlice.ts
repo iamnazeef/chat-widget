@@ -1,14 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import Toolbar from "../components/Toolbar";
 import { RootState } from "../../../../redux/store";
-import { Routes } from "../models";
-
-const routes: Routes = {
-    'new-chat': {
-        component: Toolbar,
-        title: "New Chat"
-    },
-}
+import routes from "../routes";
 
 const initialState = {
     currentRoute: routes['new-chat'],
@@ -26,7 +18,7 @@ const routerSlice = createSlice({
             
             state.currentRoute = routes[action.payload];
         },
-    }
+    },
 })
 
 
