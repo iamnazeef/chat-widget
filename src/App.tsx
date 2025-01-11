@@ -1,6 +1,10 @@
+import ChatInterface from "./common/components/ChatInterface";
+
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <div className="container">
+      <ChatInterface />
+    </div>
   )
 }
 

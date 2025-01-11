@@ -1,0 +1,12 @@
+.chatInterface {
+    position: relative;
+    width: 402px;
+    height: 658px;
+    flex-shrink: 0;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(240, 240, 240);
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 1;
+    border: 2px solid red; /* TODO: Remove */
+}
