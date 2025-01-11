@@ -1,0 +1,25 @@
+.Footer {
+    padding: 10px 16px;
+    background: rgba(1, 12, 29, 0.03);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .HyperLink {
+        width: fit-content;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: rgb(132, 132, 132);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -0.24px;
+    }
+}
