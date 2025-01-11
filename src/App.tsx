@@ -1,9 +1,9 @@
-import ChatInterface from "./common/components/ChatInterface";
+import Widget from "./features/widget";
 
 const App = () => {
   return (
-    <div className="container">
-      <ChatInterface />
+    <div id="app">
+      <Widget />
     </div>
   )
 }
