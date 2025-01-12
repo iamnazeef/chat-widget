@@ -22,6 +22,12 @@ const Toolbar = () => {
                 <p className={styles.name}>Orca</p>
             </div>
             <div className={styles.actions}>
+                {isChatHistoryActive && (
+                    <p className={styles.conversations}>
+                        <img src={chatHistoryIcon} height="14px" width="14px" />
+                        Conversations
+                    </p>
+                )}
                 <button 
                     className={styles.newChat}
                     onClick={handleNewChat} 
@@ -29,13 +35,15 @@ const Toolbar = () => {
                 >
                     <img src={newChatIcon} />
                 </button>
-                {!isChatHistoryActive && <button 
-                    className={styles.chatHistory}
-                    onClick={handleChatHistory} 
-                    title="Show all conversations" 
-                >
-                    <img src={chatHistoryIcon} />
-                </button>}
+                {!isChatHistoryActive && (
+                    <button 
+                        className={styles.chatHistory}
+                        onClick={handleChatHistory} 
+                        title="Show all conversations" 
+                    >
+                        <img src={chatHistoryIcon} />
+                    </button>
+                )}
             </div>
         </div>
     )
