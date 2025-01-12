@@ -1,0 +1,21 @@
+.newChat {
+    height: 100vh;
+    .chats {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        padding: 1rem 8px 8px;
+        overflow: auto;
+        gap: 20px;
+        height: 100%;
+        max-height: 500px;
+    }
+}
+
+.leftBubbleIcon {
+    img {
+        border-radius: 17px;
+        border: 1px solid rgb(240, 240, 240);
+        background: rgb(255, 255, 255);
+    }
+}
