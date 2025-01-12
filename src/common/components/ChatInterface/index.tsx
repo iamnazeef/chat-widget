@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Toolbar from "./components/Toolbar";
@@ -23,4 +23,4 @@ const ChatInterface: FC<IChatInterface> = ({ hidden }) => {
     )
 }
 
-export default ChatInterface;
+export default memo(ChatInterface);
