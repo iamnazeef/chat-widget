@@ -10,16 +10,21 @@
     align-items: center;
     cursor: pointer;
     will-change: auto;
-    transform: none;
-    transition: all 0.1s linear;
+    transition: transform 0.1s linear;
 
     &:hover {
         transform: scale(1.1);
     }
 }
 
-.animate {
+.animateIcon {
     animation: rotate360 0.5s ease-in-out;
+}
+
+.animateSize {
+    &:hover {
+        transform: scale(1);
+    }
 }
 
 @keyframes rotate360 {
