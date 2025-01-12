@@ -2,6 +2,7 @@ import styles from "./styles/Toolbar.module.css";
 import newChatIcon from "../../../icons/ic-new-chat.svg";
 import chatHistoryIcon from "../../../icons/ic-chat-history.svg";
 import useRouter from "../hooks/useRouter";
+import { ORCA_LOGO_LINK } from "../../../../constants";
 
 const Toolbar = () => {
     const { navigateTo, currentPage } = useRouter();
@@ -16,7 +17,7 @@ const Toolbar = () => {
                     height="22px" 
                     width="22px" 
                     className="png" 
-                    src="https://app.getorca.ai/docgen/assets/docGenLogo-960f4560.png" 
+                    src={ORCA_LOGO_LINK} 
                 />
                 <p className={styles.name}>Orca</p>
             </div>
