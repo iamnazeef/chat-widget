@@ -1,0 +1,1 @@
+export const ORCA_LOGO_LINK = "https://app.getorca.ai/docgen/assets/docGenLogo-960f4560.png"
