@@ -5,7 +5,7 @@
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
-        padding: 1rem 8px 8px;
+        padding: 1rem 6px 8px;
         overflow: auto;
         gap: 20px;
         height: 100%;
