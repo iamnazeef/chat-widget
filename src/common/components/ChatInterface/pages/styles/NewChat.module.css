@@ -1,5 +1,6 @@
 .newChat {
     height: 100vh;
+    padding: 0px 16px 16px;
     .chats {
         display: flex;
         flex-direction: column;
