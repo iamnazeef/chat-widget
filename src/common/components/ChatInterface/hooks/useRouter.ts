@@ -5,8 +5,8 @@ const useRouter = () => {
     const dispatch = useDispatch();
     const currentPage = useSelector(selectRouteSlice)
 
-    const navigateTo = (route: string) => {
-        dispatch(setCurrentRoute(route));
+    const navigateTo = (path: string, params?: object) => {
+        dispatch(setCurrentRoute({ path, params }));
     }
 
     return { currentPage, navigateTo }

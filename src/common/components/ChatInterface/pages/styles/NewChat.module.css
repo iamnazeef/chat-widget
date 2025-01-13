@@ -1,15 +1,28 @@
 .newChat {
-    height: 100vh;
+    height: 520px;
     padding: 0px 16px 16px;
+
     .chats {
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
         padding: 1rem 6px 8px;
         overflow: auto;
-        gap: 20px;
+        gap: 20px; /* Maintains consistent vertical spacing */
         height: 100%;
-        max-height: 500px;
+        width: fit-content;
+    }
+}
+
+.chatBubble {
+    max-width: 80%;
+
+    &.floatRight {
+        margin-left: auto;
+    }
+
+    &.floatLeft {
+        margin-right: auto;
     }
 }
 

@@ -24,6 +24,7 @@
         line-height: 130%;
         letter-spacing: -0.28px;
         margin-bottom: 5px;
+        max-width: 335px;
     }
 
     .metaData {
@@ -32,9 +33,5 @@
         gap: 5px;
         color: rgb(102, 102, 102);
         font-size: 12px;
-
-        .agentName {
-
-        }
     }
 }

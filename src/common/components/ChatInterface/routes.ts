@@ -2,15 +2,19 @@ import { Routes } from "./models";
 import ChatHistory from "./pages/ChatHistory";
 import NewChat from "./pages/NewChat";
 
+export const routeComponent: { [key: string]: React.ComponentType } = {
+    'newChat': NewChat,
+    'chatHistory': ChatHistory,
+}
+
 const routes: Routes = {
-    'new-chat': {
+    'newChat': {
         id: "newChat",
-        component: NewChat,
-        title: "New Chat"
+        title: "New Chat",
+        params: {}
     },
-    'chat-history': {
+    'chatHistory': {
         id: "chatHistory",
-        component: ChatHistory,
         title: "Chat History",
     },
 }

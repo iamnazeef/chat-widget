@@ -6,8 +6,8 @@ import { ORCA_LOGO_LINK } from "../../../../constants";
 
 const Toolbar = () => {
     const { navigateTo, currentPage } = useRouter();
-    const handleNewChat = () =>  navigateTo('new-chat');
-    const handleChatHistory = () => navigateTo('chat-history');
+    const handleNewChat = () =>  navigateTo('newChat', { clearChat: true });
+    const handleChatHistory = () => navigateTo('chatHistory');
     const isChatHistoryActive = currentPage.id === "chatHistory";
 
     return (

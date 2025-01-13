@@ -1,8 +1,9 @@
 
 .chatBubbleContainer {
+    gap: 8px;
+    max-width: fit-content;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
 
     .chatBubble {
         padding: 12px 12px;
@@ -22,18 +23,13 @@
     /* Align bubble left */
     .left {
         border-radius: 0 20px 20px;
+        /* float: left; */
     }
     
     /* Align bubble right */
     .right {
         border-radius: 10px 0px 20px 20px;
-    }
-    
-    .leftBubbleIcon {
-        padding-top: 24px;
+        /* float: right; */
     }
 
-    .rightBubbleIcon {
-        padding-top: 24px;
-    }
 }

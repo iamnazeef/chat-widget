@@ -2,12 +2,27 @@ import { useEffect, useState } from "react";
 import ChatListItem from "./components/ChatListItem";
 import { getChatHistory } from "../../../../api/chatInterface";
 import LoadingSpinner from "../../LoadingSpinner";
+import { IChat } from "../../../types";
+import { timeAgo } from "../../../../utils/timeAgo";
+import useRouter from "../hooks/useRouter";
+import styles from "./styles/ChatHistory.module.css";
+
+interface Conversation {
+    conversationId: string;
+    createdAt: number;
+    organisationId: number;
+    type: "ai" | "visitor";
+    visitorType: string;
+    lastMessage: IChat;
+}
 
 const ChatHistory = () => {
     const [isLoading, setIsLoading] = useState(false);
+    const [chats, setChats] = useState<Array<Conversation>>([]);
+    const { navigateTo } = useRouter();
 
     const handleChatClick = (id: string) => {
-        console.log(id)
+        navigateTo('newChat', { conversationId: id });
     }
 
     const fetchChatHistory = async () => {
@@ -15,6 +30,7 @@ const ChatHistory = () => {
             setIsLoading(true);
             const response = await getChatHistory();
             console.log(response.data);
+            setChats(response.data?.conversations);
         } catch (e) {
             console.log(e);
         } finally {
@@ -30,14 +46,17 @@ const ChatHistory = () => {
         return <LoadingSpinner />
 
     return (
-        <ul id="chat-list">
-            <ChatListItem 
-                id="1"
-                title="I Dont Have Any Idea?" 
-                agent="Orca AI"
-                time="10 hours ago"
-                onClick={handleChatClick}
-            />
+        <ul id="chat-list" className={styles.chatHistory}>
+            {chats.map(chat => (
+                <ChatListItem 
+                    key={chat.conversationId}
+                    id={chat.conversationId}
+                    title={chat.lastMessage.content}
+                    agent="Orca AI"
+                    time={timeAgo(chat.createdAt)}
+                    onClick={handleChatClick}
+                />  
+            ))}
         </ul>
     )
 }
