@@ -1,0 +1,18 @@
+.offline {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 8px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.28px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    background-color: #F0F7FF;
+    border-radius: 10px;
+    color: rgb(95, 101, 121);
+
+    i {
+        font-size: 12px;
+        font-family: 'Arial';
+    }
+}

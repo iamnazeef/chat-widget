@@ -1,22 +1,31 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../../../redux/store";
-import routes from "../routes";
+import routes from "../routes"; 
 
 const initialState = {
-    currentRoute: routes['new-chat'],
+    currentRoute: routes['newChat'],
 };
+
+interface Route {
+    path: string;
+    params?: object;
+}
 
 const routerSlice = createSlice({
     name: "routerSlice",
     initialState,
     reducers: {
-        setCurrentRoute: (state, action: PayloadAction<string>) => {
-            if (!(action.payload in routes)) {
+        setCurrentRoute: (state, action: PayloadAction<Route>) => {
+            if (!(action.payload.path in routes)) {
               state.currentRoute = initialState.currentRoute;
               return;
             }
             
-            state.currentRoute = routes[action.payload];
+            const route = routes[action.payload.path];
+            state.currentRoute = {
+                ...route,
+                params: action.payload.params,
+            };
         },
     },
 })

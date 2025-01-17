@@ -7,7 +7,7 @@ axios.defaults.withCredentials = true;
 
 const httpService = {
     /**  Axios Get Request (endpoint | query-params) */
-    get: (endpoint: string, params: object) => {
+    get: (endpoint: string, params?: object) => {
         return axios.get(endpoint, { params });
     },
     post: (endpoint: string, payload?: object, queryParams?: object) => {

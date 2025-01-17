@@ -4,13 +4,12 @@ import styles from "../styles/ChatBubble.module.css";
 interface IChatBubble {
     children: React.ReactNode;
     align: "left" | "right";
-    leftBubbleIcon?: React.ReactNode;
-    rightBubbleIcon?: React.ReactNode;
+    bubbleIcon?: React.ReactNode;
     backgroundColor?: string;
 }
 
 const ChatBubble: FC<IChatBubble> = ({ 
-    children, align, backgroundColor, leftBubbleIcon, rightBubbleIcon }) => {
+    children, align, backgroundColor, bubbleIcon }) => {
 
     return (
         <div 
@@ -20,9 +19,9 @@ const ChatBubble: FC<IChatBubble> = ({
             {align === "left" && 
             <div 
                 id="avatar" 
-                className={styles.leftBubbleIcon}
+                className={styles.bubbleIcon}
             >
-                {leftBubbleIcon}
+                {bubbleIcon}
             </div>}
             <div
                 id="chat-interface-bubble" 
@@ -33,7 +32,13 @@ const ChatBubble: FC<IChatBubble> = ({
              >
                 {children}
             </div>
-            {align === "right" && <div id="avatar" className={styles.rightBubbleIcon}>{rightBubbleIcon}</div>}
+            {align === "right" &&
+            <div 
+                id="avatar" 
+                className={styles.bubbleIcon}
+            >
+                {bubbleIcon}
+            </div>}
         </div>
     )
 }
