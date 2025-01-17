@@ -128,7 +128,7 @@ const NewChat = () => {
                         </div>
                     )
                 })}
-                {loadingResponse || isAPIProcessing && (
+                {(loadingResponse || isAPIProcessing) && (
                     <div className={styles.chatBubble}>
                         <LoadingResponse />
                     </div>
